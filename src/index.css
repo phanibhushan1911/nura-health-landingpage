@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-moss: #2E4036;
+  --color-clay: #CC5833;
+  --color-cream: #F2F0E9;
+  --color-charcoal: #1A1A1A;
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-drama: 'Cormorant Garamond', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased selection:bg-moss selection:text-cream;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Noise Overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+}
